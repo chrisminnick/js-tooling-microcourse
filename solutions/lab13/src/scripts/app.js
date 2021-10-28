@@ -1,4 +1,9 @@
-import {greet} from './sayHello.js';
-window.addEventListener('load',()=>{
-    document.getElementById('welcome-message').innerHTML = greet('Chris');
-});
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+  
+  ReactDOM.render(<SayHello name="World" />, 
+  document.getElementById("app"));
+
+    

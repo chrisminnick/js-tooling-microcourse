@@ -1,9 +1,11 @@
-var sayHello = require('../src/scripts/sayHello.js');
+import React from 'react';
+import {render, screen} from '@testing-library/react';
+import SayHello from '../src/scripts/SayHello.js';
 
-describe('Greet', function() {
-    it('concats Hello and a name', function() {
-        var actual = sayHello.greet('World');
-        var expected = 'Hello, World';
-        expect(actual).toEqual(expected);
-    });    
+  test('says Hello', () => {
+    render(
+      <SayHello />,
+    );
+
+    expect (screen.getByText(/Hello/));
 });

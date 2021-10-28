@@ -1,5 +1,9 @@
-exports.greet = function greet(name) {
+import React from 'react';
 
-    return 'Hello, ' + name;
+class SayHello extends React.Component {
+    render(){
+      return (<h1>Hello, {this.props.name}</h1>);
+    }
+}
 
-};
+export default SayHello;

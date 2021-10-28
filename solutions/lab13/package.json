@@ -8,7 +8,7 @@
   },
   "scripts": {
     "version": "node version-check.js",
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "lint": "eslint . --ext .js",
     "build": "echo \"BUILD OK\" && exit 0",
     "prebuild": "npm run version && npm run lint && npm run test && npm run bundle",
@@ -20,6 +20,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/react": "^12.1.2",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.1.0",
@@ -30,5 +32,9 @@
     "semver": "^7.3.5",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
