@@ -8,11 +8,11 @@
   },
   "scripts": {
     "version": "node version-check.js",
-    "test": "echo \"All tests passed\" && exit 0",
+    "test": "jest",
     "lint": "eslint . --ext .js",
     "build": "echo \"BUILD OK\" && exit 0",
     "prebuild": "npm run version && npm run lint && npm run test",
-    "start":"http-server src"
+    "start": "http-server src"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "eslint": "^8.1.0",
     "eslint-plugin-react": "^7.26.1",
     "http-server": "^14.0.0",
+    "jest": "^27.3.1",
     "semver": "^7.3.5"
   }
 }
