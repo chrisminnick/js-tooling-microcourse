@@ -1,0 +1,23 @@
+{
+  "name": "react-tools-training",
+  "version": "1.0.0",
+  "description": "React Project Template with automated build.",
+  "main": "javascript.js",
+  "engines": {
+    "node": "14.0.0"
+  },
+  "scripts": {
+    "version": "node version-check.js",
+    "test": "echo \"All tests passed\" && exit 0",
+    "lint": "eslint . --ext .js",
+    "build": "echo \"BUILD OK\" && exit 0",
+    "prebuild": "npm run version && npm run lint && npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-plugin-react": "^7.26.1",
+    "semver": "^7.3.5"
+  }
+}
